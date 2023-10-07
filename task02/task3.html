@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="task3_style.css">
+    <title>Task3</title>
+</head>
+<body>
+    <h1>Форма заказа билетов на самолет</h1>
+
+    <form>
+        <label for="name">Имя:</label>
+        <br>
+        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+        <br><br>
+        
+        <label for="password">Пароль:</label>
+        <br>
+        <input type="password" id="password" name="password" required>
+
+        <br><br>
+
+        <label for="message">Личные пожелания:</label>
+        <br>
+        <textarea id="message" name="message" rows="5" cols="30" placeholder="Введите ваше сообщение"></textarea>
+
+        <br><br>
+
+        <label>Пол:</label>
+        <br>
+        <label for="male">Мужской</label>
+        <input type="radio" id="male" name="gender" value="male">
+
+    
+        <label for="female">Женский</label>
+        <input type="radio" id="female" name="gender" value="female">
+
+        <br><br>
+
+        <label>Дополнительные услуги:</label>
+        <br>
+        <label for="meal">Питание на борту</label>
+        <input type="checkbox" id="meal" name="services" value="meal">
+
+        <label for="wifi">Wi-Fi</label>
+        <input type="checkbox" id="wifi" name="services" value="wifi">
+
+        <br><br>
+
+        <label for="destination">Место назначения:</label>
+        <select id="destination" name="destination">
+            <option value="paris">Париж</option>
+            <option value="newyork">Нью-Йорк</option>
+            <option value="tokyo">Токио</option>
+        </select>
+
+        <br><br>
+
+        <label for="date">Дата вылета:</label>
+        <input type="date" id="date" name="date">
+
+        <br><br>
+
+        <input type="submit" value="Заказать билет">
+        <input type="reset" value="Очистить форму">
+    </form>
+</body>
+</html>
+
+

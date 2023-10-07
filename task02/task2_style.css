@@ -1,0 +1,43 @@
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.tg th {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f6deee;
+    text-align: center;
+}
+
+.tg td {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.tg .tg-even {
+    background-color: #e9e9e9;
+}
+
+.tg .tg-odd {
+    background-color: #ffffff;
+}
+
+.tg .tg-center {
+    text-align: center;
+}
+
+.tg .tg-left {
+    text-align: left;
+}
+
+.tg .tg-right {
+    text-align: right;
+}
