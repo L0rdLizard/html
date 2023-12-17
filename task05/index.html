@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice</title>
+
+    <script src="script.js"></script>
+
+    <script>
+        alert("У меня появились навыки создания веб-страниц с использованием HTML и CSS");
+    </script>
+
+    <script>
+        let groupNumber = 20;
+        let message = "I am " + groupNumber.toString() + " years old";
+        console.log(message);
+
+        let age = 20;
+        if (age < 18) {
+            alert("Вы не можете пройти дальше. Вам нет 18 лет");
+        } else if (age > 35) {
+            alert("Вы не можете пройти дальше. Вам больше 35 лет");
+        }else {
+            alert("Вы можете пройти дальше");
+        } 
+
+        let strNumber = "1000";
+        let convertedNumber = +strNumber;
+        console.log("String to Integer: " + convertedNumber);
+    </script>
+
+    <script>
+        // Function Declaration
+        function sumDeclaration(a, b) {
+            return a + b;
+        }
+
+        // Function Expression
+        let sumExpression = function (a, b) {
+            return a + b;
+        };
+
+        // Arrow Function
+        let sumArrow = (a, b) => {
+            return a + b;
+        };
+
+        console.log("Function Declaration: " + sumDeclaration(1, 2));
+        console.log("Function Expression: " + sumExpression(1, 2));
+        console.log("Arrow Function: " + sumArrow(1, 2));
+    </script>
+
+</head>
+<body>
+<p>Цель работы – приобретение навыков создания для HTML-документа внешних
+    и внутренних скриптов на JavaScript, формирование практических навыков
+    использования операторов и создания функций.</p>
+</body>
+</html>
