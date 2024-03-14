@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Слайд-шоу</title>
+</head>
+<body>
+    <a href=""><img id="slideshow" src="" alt="Слайд-шоу"></a>
+
+    <script>
+        var images = ['borzoi1.jpg', 'borzoi2.jpg', 'borzoi3.jpg'];
+        var currentIndex = 0;
+
+        function updateImage() {
+            var imgElement = document.getElementById('slideshow');
+
+            imgElement.src = images[currentIndex];
+
+            imgElement.parentElement.href = images[currentIndex];
+
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+        setInterval(updateImage, 1000);
+    </script>
+</body>
+</html>

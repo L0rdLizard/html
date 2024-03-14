@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Приветствие</title>
+</head>
+<body>
+    <h1>Добро пожаловать!</h1>
+    <p id="greeting"></p>
+    <p id="visits"></p>
+    <input type="text" id="name" placeholder="Введите ваше имя">
+    <button onclick="saveName()">Сохранить</button>
+
+    <script>
+        window.onload = function() {
+            var name = getCookie("name");
+
+            if (name) {
+                document.getElementById("greeting").innerText = "Привет, " + name + "!";
+            }
+
+            var visits = localStorage.getItem("visits");
+
+            if (!visits) {
+                visits = 0;
+            }
+
+            visits++;
+
+            localStorage.setItem("visits", visits);
+
+            document.getElementById("visits").innerText = "Вы посетили эту страницу " + visits + " раз.";
+        }
+
+        function saveName() {
+            var name = document.getElementById("name").value;
+            setCookie("name", name, 365);
+            document.getElementById("greeting").innerText = "Привет, " + name + "!";
+        }
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for(var i = 0; i <ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+    </script>
+</body>
+</html>
