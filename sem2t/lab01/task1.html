@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Slideshow</title>
+</head>
+<body>
+    <a href=""><img id="slideshow" src="" alt="slideshow"></a>
+
+    <script>
+        var images = ['cat1.jpg', 'cat2.jpg', 'cat3.jpg'];
+        var currentIndex = 0;
+
+        function updateImage() {
+            var imgElement = document.getElementById('slideshow');
+            imgElement.src = images[currentIndex];
+            imgElement.parentElement.href = images[currentIndex];
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+        setInterval(updateImage, 2000);
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slideshow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+        #slideshow {
+            max-width: 60%;
+            max-height: 60%;
+        }
+        #slideshow-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="slideshow-container">
+        <a href=""><img id="slideshow" src="" alt="slideshow"></a>
+    </div>
+
+    <script>
+        var images = ['cat1.jpg', 'cat2.jpg', 'cat3.jpg'];
+        var currentIndex = 0;
+
+        function updateImage() {
+            var imgElement = document.getElementById('slideshow');
+            imgElement.src = images[currentIndex];
+            imgElement.parentElement.href = images[currentIndex];
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+        setInterval(updateImage, 2000);
+    </script>
+</body>
+</html>
